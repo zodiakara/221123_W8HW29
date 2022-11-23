@@ -4,7 +4,7 @@ import WarningSign from "./components/WarningSign";
 import MyBadge from "./components/MyBadge";
 import books from "./assets/scifi.json";
 
-import SingleBook from "./components/SingleBook";
+import BookList from "./components/BookList";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <div>
         <MyBadge text="badge" color="bg-success" />
       </div>
-      <SingleBook book={books[0]} />
+      <BookList books={books} />
     </div>
   );
 }

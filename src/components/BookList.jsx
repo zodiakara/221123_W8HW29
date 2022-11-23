@@ -1,5 +1,7 @@
-// function BookList({ arr }) {
-//   return { arr }.map(BookList({ book }));
-// }
+import SingleBook from "./SingleBook";
 
-// export default BookList;
+function BookList({ books }) {
+  return books.map((book) => <SingleBook book={book} key={book.asin} />);
+}
+
+export default BookList;

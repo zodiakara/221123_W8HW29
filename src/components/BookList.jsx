@@ -19,7 +19,11 @@ class BookList extends Component {
 
     return (
       <>
-        <input onChange={this.handleOnChange}></input>
+        <input
+          onChange={this.handleOnChange}
+          placeholder="browse your books here ..."
+        ></input>
+        <h3>Book list</h3>
         {list}
       </>
     );

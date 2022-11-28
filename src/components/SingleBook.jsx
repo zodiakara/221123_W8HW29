@@ -6,23 +6,22 @@ class SingleBook extends Component {
     selected: false,
   };
 
-  handleOnClick() {
-    this.setState({ selected: !this.state.selected });
-  }
+  // handleOnClick() {
+  //   this.setState({ selected: !this.state.selected });
+  // }
 
   render() {
     const book = this.props.book;
-    const isSelected = this.state.selected ? "lightgrey" : "";
 
     return (
       <Card
-        onClick={this.handleOnClick}
+        onClick={() => this.setState({ selected: !this.state.selected })}
         style={{
-          width: "18rem",
-          backgroundColor: isSelected,
+          backgroundColor: this.state.selected ? "lightgrey" : "",
         }}
+        className="my-4 justify-content-center"
       >
-        <Card.Img variant="top" src={book.img} />
+        <Card.Img variant="top" src={book.img} className="img-fluid" />
         <Card.Body>
           <Card.Title>{book.title}</Card.Title>
         </Card.Body>
